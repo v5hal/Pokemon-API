@@ -1,0 +1,57 @@
+/* CSS styling for the entire document */
+body {
+    font-family: 'Times New Roman', Times, serif; /* Classic serif font */
+    background-color: #f5f5f5; /* Classic light gray background color */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px; /* Set a max-width to center content */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px;
+}
+
+/* CSS styling for Pokémon data display */
+.pokemon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px -10px; /* Add negative margin to counteract padding */
+}
+
+.pokemon-card {
+    flex: 0 0 calc(33.33% - 20px);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 10px 20px; /* Add margin around each card */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
+    text-align: center; /* Center align text */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    background-color: #add8e6; /* Classic light blue background color */
+}
+
+.pokemon-card h3 {
+    margin-top: 0;
+    font-family: 'Times New Roman', Times, serif; /* Classic serif font */
+    color: #333; /* Classic dark gray color */
+}
+
+.pokemon-card ul {
+    margin-bottom: 0;
+    list-style: none; /* Remove bullet points from the list */
+    padding: 0; /* Remove default padding from the list */
+}
+
+.pokemon-card li {
+    font-family: 'Times New Roman', Times, serif; /* Classic serif font */
+    color: #333; /* Classic dark gray color */
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .pokemon-card {
+        flex-basis: calc(50% - 20px); /* Two cards per row on smaller screens */
+    }
+}
